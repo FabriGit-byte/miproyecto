@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Mirian 🌹</title>
+
+<style>
+body{
+   margin:0;
+   padding:0;
+   font-family: Georgia, serif;
+   color:white;
+   text-align:center;
+   overflow-x:hidden;
+   background: radial-gradient(circle at center, #3a0a3a 0%, #1a001a 40%, #000000 100%);
+   position:relative;
+}
+
+/* Estrellitas */
+body::before{
+   content:"";
+   position:fixed;
+   top:0;
+   left:0;
+   width:100%;
+   height:100%;
+   background-image: radial-gradient(white 1px, transparent 1px);
+   background-size: 50px 50px;
+   opacity:0.08;
+   animation: moverEstrellas 60s linear infinite;
+   z-index:-1;
+}
+
+@keyframes moverEstrellas{
+    from{transform:translateY(0);}
+    to{transform:translateY(200px);}
+}
+
+
+/* Flores laterales */
+.flor{
+    position:fixed;
+    top:0;
+    width:60px;
+    height:100vh;
+    background-image:url('https://i.imgur.com/9QZ7Z9F.png');
+    background-size:contain;
+    background-repeat:repeat-y;
+    opacity:0.25;
+}
+
+.flor.izq{ left:0; }
+.flor.der{ right:0; }
+
+/* Carta cerrada */
+.carta{
+    margin-top:25vh;
+    margin-left:20px;
+    margin-right:20px;
+    padding:20px;
+    border:2px solid #ff4d88;
+    border-radius:15px;
+    background:rgba(255,255,255,0.05);
+    cursor:pointer;
+    transition:0.4s;
+    font-size:18px;
+}
+
+/* Contenido carta */
+#contenido{
+    display:none;
+    margin:40px 20px;
+    padding:25px;
+    background:rgba(255,255,255,0.08);
+    border-radius:20px;
+    animation:fadeIn 1.5s ease-in-out;
+}
+
+h1{
+    color:#ff4d88;
+    font-size:26px;
+}
+
+p{
+    font-size:17px;
+    line-height:1.8;
+    margin-bottom:18px;
+}
+
+/* Fotos */
+.fotos{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:20px 0;
+}
+
+.fotos img{
+    width:110px;
+    height:150px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+.corazon-centro{
+    font-size:18px;
+    color:#ff4d88;
+    margin:0 -15px;
+    z-index:1;
+    animation:latido 1s infinite;
+}
+
+
+@keyframes latido{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.2);}
+    100%{transform:scale(1);}
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* Corazones cayendo */
+.corazon{
+    position:fixed;
+    color:#ff4d88;
+    font-size:16px;
+    animation:caer linear forwards;
+}
+
+@keyframes caer{
+    0%{transform:translateY(-10vh); opacity:1;}
+    100%{transform:translateY(110vh); opacity:0;}
+}
+ 
+ /* Lluvia de gotas suaves */
+.lluvia{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:0;
+
+}
+
+.gota{
+    position:absolute;
+    top:-20px;
+    width:2px;
+    height:15px;
+    background: rgba(255,255,255,0.2);
+    border-radius:50%;
+    animation: caerGota linear infinite;
+}
+
+@keyframes caerGota{
+    from{
+        transform: translateY(-20px);
+        opacity:0.6;
+    }
+    to{
+        transform: translateY(100vh);
+        opacity:0;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="lluvia" id="lluvia"></div>
+
+
+<div class="carta" onclick="abrirCarta()">
+    💌 Tocá aquí para abrir mi carta, Mirian
+</div>
+
+<div id="contenido">
+    <h1>Mirian...</h1>
+
+    <!-- FOTOS DE USTEDES -->
+    <div class="fotos">
+        <img src="IMG_20251224_212837_111.jpg" alt="Fabricio">
+<div class="corazon-centro">❤</div>
+<img src="IMG-20260209-WA0038.jpg" alt="Mirian">
+
+    </div>
+
+    <p>
+    No sé si esto cambiará lo que pasó, ni si estas palabras llegan en el momento correcto.
+    Pero necesitaba sentarme, pensar en vos, y escribir desde lo más sincero que tengo.
+    </p>
+
+    <p>
+    Lo que dije fue un error. Un error que salió sin pensar, sin intención.
+    Fue un descuido de palabras… pero jamás fue un descuido de sentimientos.
+    </p>
+
+    <p>
+    Nunca fue comparación. Nunca fue pasado volviendo.
+    Porque mi pasado ya no ocupa el lugar que ocupa mi presente.
+    Y mi presente, Mirian… sos vos.
+    </p>
+
+    <p>
+    Me duele saber que algo tan pequeño pudo lastimarte.
+    Si pudiera volver ese segundo atrás, lo cambiaría sin dudarlo.
+    </p>
+
+    <p>
+    No escribo esto para presionarte.
+    Lo escribo porque lo que siento es real.
+    Porque cuando algo es verdadero, uno no puede simplemente callarlo.
+   </p>
+
+   <p>
+   A veces también me duele la distancia. La odio, porque siento que me roba momentos que quisiera vivir a tu lado.
+   Quisiera poder estar ahí, mirarte a los ojos mientras te explico todo esto, que veas cómo soy realmente,
+   cómo trato a las personas que quiero, cómo cuido lo que amo.
+   </p>
+
+   <p>
+   Quisiera que pudieras sentir en persona lo que intento transmitir con palabras.
+   Que vieras que no soy perfecto, pero que cuando quiero a alguien lo hago de verdad,
+   sin juegos, sin dudas, sin comparaciones.
+   </p>
+
+   <p>
+   Tal vez la distancia a veces confunde, tal vez las palabras escritas no alcanzan,
+   pero si algo tengo claro es que lo que siento por vos no es pasajero.
+   Es sincero, es profundo, y nace desde un lugar muy honesto de mi corazón.
+  </p>
+
+    <p style="color:#ff4d88; font-size:19px;">
+    Y como último regalo…
+    </p>
+
+    <p>
+    Quiero dedicarte estas 2 canciónes que dice mucho más de lo que a veces puedo explicar, espero puedas leer la letra en Español en una de ellas:
+    </p>
+
+    <p style="color:#ff4d88;">  
+    “Car's Outside” — James Arthur🎵
+    “La Carretera” — Prince Royce
+    </p>
+
+    <p>
+    Ojalá la escuches…
+    y recuerdes que lo que siento por vos es verdadero.
+    </p>
+
+    <p>
+    Con cariño,  
+    Fabricio.
+    </p>
+</div>
+
+<script>
+function abrirCarta(){
+    document.querySelector('.carta').style.display="none";
+    document.getElementById('contenido').style.display="block";
+}
+
+/* Corazones */
+function crearCorazon(){
+    const corazon=document.createElement("div");
+    corazon.classList.add("corazon");
+    corazon.innerHTML="❤";
+    corazon.style.left=Math.random()*100+"vw";
+    corazon.style.animationDuration=(Math.random()*3+4)+"s";
+    document.body.appendChild(corazon);
+
+    setTimeout(()=>{
+        corazon.remove();
+    },7000);
+}
+   
+const lluvia = document.getElementById("lluvia");
+
+for(let i=0; i<40; i++){
+    let gota = document.createElement("div");
+    gota.classList.add("gota");
+    gota.style.left = Math.random() * 100 + "vw";
+    gota.style.animationDuration = (Math.random() * 3 + 2) + "s";
+    gota.style.animationDelay = Math.random() * 5 + "s";
+    lluvia.appendChild(gota);
+}
+
+setInterval(crearCorazon,500);
+</script>
+
+</body>
+</html>
